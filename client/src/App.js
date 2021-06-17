@@ -10,7 +10,7 @@ import Dashboard from "./components/pages/Dashboard"
 import PrivateRoute from "./components/route/PrivateRoute";
 function App() {
   const dispatch = useDispatch()
-  const getUser = () => dispatch(getAuthUser)
+  const getUser = () => dispatch(getAuthUser())
   useEffect(() => {
     getUser()
   },[])
