@@ -76,12 +76,12 @@ import {LOGIN_USER ,
         try {
          const option = {
              headers :{
-                "authorization" : localStorage.getItem("token") 
+                authorization : localStorage.getItem("token") 
              }
             
          }
 
-              const res = axios.get("/api/auth/me" , option)
+              const res = await axios.get("/api/auth/me" , option)
               dispatch ({
                   type : GET_AUTH_USER ,
                   payload : res.data ,
